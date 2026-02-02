@@ -1887,6 +1887,20 @@
         top: 0;
         left: 0;
     }
+
+/* Mobile view: make iframe much taller */
+@media (max-width: 768px) {
+    .booking-iframe-wrapper {
+        min-height: 1800px;   /* taller minimum on mobile */
+        height: 3200px;       /* strong fallback for long mobile flows */
+        margin: 1rem 0;
+    }
+
+    .booking-iframe-wrapper iframe {
+        height: 600%;         /* extra height to avoid internal scrolling */
+    }
+}
+
   .video-container {
     width: 100%;
     max-width: 800px;
